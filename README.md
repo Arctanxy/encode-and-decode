@@ -21,3 +21,18 @@ from urllib.request import urlopen
 textPage = urlopen("https://fengshenfeilian.github.io/")
 print(str(textPage.read(),'utf-8'))
 ```
+```
+import requests
+url="http://www.starbaby.cn/zhinan/609987"
+req =requests.get(url)
+req.encoding='utf-8' #显式地指定网页编码，一般情况可以不用
+print(req.text)
+
+```
+```
+html = response.read().decode('utf8',errors='replace')
+
+然后把html变量传入Beautifulsoup()就没问题了:
+soup = BeautifulSoup(html)
+```
+4. 如果转换之后还有问题可能是网页中包含的编码信息有误，可以使用chardetect库来探测网页真实编码。
