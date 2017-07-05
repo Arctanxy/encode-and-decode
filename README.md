@@ -36,3 +36,6 @@ html = response.read().decode('utf8',errors='replace')
 soup = BeautifulSoup(html)
 ```
 4. 如果转换之后还有问题可能是网页中包含的编码信息有误，可以使用chardetect库来探测网页真实编码。
+5. python3 源文件默认是‘utf-8’编码，通常如需要utf-8编码的话不需要额外添加文件头 #coding:utf-8。
+6. 控制台中的print（）会默认使用gbk编码。
+7. 各种编码简介参考：http://shanchao7932297.blog.163.com/blog/static/1363624201010265449609/
