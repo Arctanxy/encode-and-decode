@@ -6,7 +6,7 @@ python中文编码问题的小结
 
 2. 很多网站都会在<head>中包含编码信息，如：<meta charset="utf-8" />这样的信息。
 
-3. 将数据爬取下来之后要转换成网页对应的编码。
+3. 将数据爬取下来之后要将网页的代码转换成‘utf-8’。
 
 ```
 html = urlopen("https://fengshenfeilian.github.io/")
